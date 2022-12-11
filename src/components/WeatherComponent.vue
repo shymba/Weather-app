@@ -10,6 +10,12 @@
           <option value="Sydney">Sydney</option>
           <option value="Porto">Porto</option>
           <option value="Tokyo">Tokyo</option>
+          <option value="Orihuela">Orihuela</option>
+          <option value="Alicante">Alicante</option>
+          <option value="Valencia">Valencia</option>
+          <option value="Madrid">Madrid</option>
+          <option value="Murcia">Murcia</option>
+          <option value="Torrevieja">Torrevieja</option>
         </select>
         <button class="btn" @click="addCity">Add City</button>
       </div>
@@ -18,8 +24,8 @@
         <table id="weather">
           <tr>
             <th>City</th>
-            <th>MinTemp</th>
             <th>MaxTemp</th>
+            <th>MinTemp</th>
           </tr>
           <tr class="content" v-for="city in cities" :key="city" v-if="cities.length > 0">
             <td>{{ city.name }}</td>
@@ -40,7 +46,6 @@ export default {
   name: 'HelloWorld',
   data() {
     return {
-      citySelected: null,
       tempMax: null,
       tempMin: null,
       cities: [],
@@ -165,6 +170,7 @@ export default {
 
       i:hover {
         color: #CC0022;
+        transform: scale(1.4);
       }
     }
 
