@@ -100,6 +100,12 @@ export default {
 </script>
 
 <style scoped lang="scss">
+$white-color: #FFFFFF;
+$hover-yellow-color: #fdd114;
+$dark-base-color: #6D6C58;
+$dark-bg-color: #39343B;
+$hover-basket-color: #CC0022;
+
 .container {
   display: flex;
   flex-direction: column;
@@ -121,28 +127,28 @@ export default {
     #weather {
       border-collapse: collapse;
       width: 100%;
-      color: #FFFFFF;
+      color: $white-color;
     }
 
     #weather td, #weather th {
       border: none;
       padding: 8px;
-      color: #6D6C58;
+      color: $dark-base-color;
     }
 
     #weather tr:nth-child(even) {
-      background-color: #39343B;
+      background-color: $dark-bg-color;
     }
 
     #weather tr:hover td, tr:focus td {
-      color: #fdd114;
+      color: $hover-yellow-color;
     }
 
     #weather th {
       padding-top: 12px;
       padding-bottom: 12px;
       text-align: center;
-      color: #FFFFFF;
+      color: $white-color;
     }
 
     .select-container {
@@ -152,7 +158,7 @@ export default {
     }
 
     label {
-      color: #FFFFFF;
+      color: $white-color;
       margin-bottom: 20px;
     }
 
@@ -169,7 +175,7 @@ export default {
       }
 
       i:hover {
-        color: #CC0022;
+        color: $hover-basket-color;
         transform: scale(1.4);
       }
     }
@@ -188,8 +194,8 @@ export default {
 
     select:focus {
       outline: none;
-      color: #fdd114;
-      background-color: #6D6C58;
+      color: $hover-yellow-color;
+      background-color: $dark-base-color;
     }
 
     .btn {
@@ -197,7 +203,7 @@ export default {
       padding: 5px 8px;
       outline: none;
       background-color: transparent;
-      color: #fdd114;
+      color: $hover-yellow-color;
       border: none;
       margin-left: 15px;
       cursor: pointer;
